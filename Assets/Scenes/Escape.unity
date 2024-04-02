@@ -4048,6 +4048,7 @@ GameObject:
   - component: {fileID: 1683286155}
   - component: {fileID: 1683286154}
   - component: {fileID: 1683286157}
+  - component: {fileID: 1683286158}
   m_Layer: 0
   m_Name: followCamera
   m_TagString: Untagged
@@ -4122,14 +4123,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683286153}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.028154254, z: 0, w: -0.9996036}
-  m_LocalPosition: {x: -0.0063463226, y: 1.3600003, z: -2.7404487}
+  m_LocalRotation: {x: 0, y: -0.99960357, z: 0, w: -0.028157145}
+  m_LocalPosition: {x: -0.0063463226, y: 1.3600003, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 614216207}
   m_Father: {fileID: 550112244}
-  m_LocalEulerAnglesHint: {x: 0, y: 87.686, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: -3.227, z: 180}
 --- !u!54 &1683286157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4157,6 +4158,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1683286158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683286153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1cae464b41f3945a8240733b19a124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 550112244}
+  offset: {x: 0, y: 0, z: 0}
+  smoothSpeed: 0.125
 --- !u!1001 &1716237037
 PrefabInstance:
   m_ObjectHideFlags: 0
