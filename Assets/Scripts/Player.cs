@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.tag == "Gem") // Make sure your gem has the tag "Gem"
         {
             Destroy(other.gameObject); // Remove the gem from the scene
-            sphere.GetComponent<SphereScript>().Activate(); // Activate the sphere
+            sphere.GetComponent<BoulderMovement>().Activate(); // Activate the sphere
         }
     }
 }
