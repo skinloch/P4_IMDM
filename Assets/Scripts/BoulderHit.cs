@@ -21,7 +21,7 @@ public class BoulderHit : MonoBehaviour
         if (collision.gameObject.tag == "Boulder")
         {
             // Display the "You Lose" message
-            loseText.text = "You Lose";
+            loseText.text = "You Lose!";
             loseText.gameObject.SetActive(true);
 
             // Disable the player's movement script(s)
