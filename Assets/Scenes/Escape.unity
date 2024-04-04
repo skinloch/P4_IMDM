@@ -4459,8 +4459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae08a4175a63454da21b5650cd0ec4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 19.17429, y: 0.009999931, z: -1.999518}
-  distanceThreshold: 1
+  triggerXPosition: 21.17429
 --- !u!114 &1831878429
 MonoBehaviour:
   m_ObjectHideFlags: 0
