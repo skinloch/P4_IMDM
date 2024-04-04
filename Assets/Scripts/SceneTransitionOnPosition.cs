@@ -3,13 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionOnPosition : MonoBehaviour
 {
-    public Vector3 targetPosition; // The target position to trigger the scene switch
-    public float distanceThreshold = 1f; // How close the player needs to be to the target position
+    public float triggerXPosition; // The x position at which to trigger the scene transition
 
     void Update()
     {
-        // Check if the player is within the distance threshold of the target position
-        if (Vector3.Distance(transform.position, targetPosition) <= distanceThreshold)
+        // Check if the player has passed the specified x position
+        if (transform.position.x >= triggerXPosition)
         {
             // Load the next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
