@@ -16,6 +16,7 @@ TagManager:
   - Gem
   - inviswall
   - Boulder
+  - Biplane
   layers:
   - Default
   - TransparentFX
