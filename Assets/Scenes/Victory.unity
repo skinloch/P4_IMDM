@@ -3946,10 +3946,10 @@ MonoBehaviour:
   runningMode: 0
   _worldAnnotationArea: {fileID: 1872393580}
   _poseDetectionAnnotationController: {fileID: 473069099}
-  _holisticAnnotationController: {fileID: 0}
-  _poseWorldLandmarksAnnotationController: {fileID: 0}
-  _segmentationMaskAnnotationController: {fileID: 0}
-  _poseRoiAnnotationController: {fileID: 0}
+  _holisticAnnotationController: {fileID: 473069100}
+  _poseWorldLandmarksAnnotationController: {fileID: 1872393581}
+  _segmentationMaskAnnotationController: {fileID: 473069098}
+  _poseRoiAnnotationController: {fileID: 473069101}
 --- !u!4 &1720418463
 Transform:
   m_ObjectHideFlags: 0
