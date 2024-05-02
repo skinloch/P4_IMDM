@@ -13,9 +13,14 @@ public class FollowHand : MonoBehaviour
         
     }
 
+    /*public bool rightPoint(){
+        if(Gesture.gen.righthandpos[4].x - Gesture.gen.righthandpos[8].x)
+    }*/
+
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Gesture.gen.righthandpos[4]);
+        Debug.Log("4: " + Gesture.gen.righthandpos[4].x + ", 8: " + Gesture.gen.righthandpos[8].x);
+
     }
 }
