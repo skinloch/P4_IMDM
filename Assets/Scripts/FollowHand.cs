@@ -8,19 +8,43 @@ using UnityEngine;
 public class FollowHand : MonoBehaviour
 {
     public static Gesture gen; // singleton
+    public Rigidbody rb;
     void Start()
     {
         
     }
 
-    /*public bool rightPoint(){
-        if(Gesture.gen.righthandpos[4].x - Gesture.gen.righthandpos[8].x)
-    }*/
+    private float getAbs(float value)
+    {
+        if(value < 0f){
+            return value * -1f;
+        }
+        else{
+            return value;
+        }
+    }
+
+    public bool rightPointer(){
+        if(Gesture.gen.righthandpos[4].magnitude == 0 && Gesture.gen.righthandpos[8].magnitude == 0)
+        {
+            return false;
+        }
+        else if(getAbs(Gesture.gen.righthandpos[4].magnitude - Gesture.gen.righthandpos[8].magnitude) < .02f)
+        {
+            Debug.Log("PINCH");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("4: " + Gesture.gen.righthandpos[4].x + ", 8: " + Gesture.gen.righthandpos[8].x);
-
+        if(rightPointer()){
+            rb.AddForce(100f, 0f, 0f, ForceMode.Impulse);
+        }
     }
 }
