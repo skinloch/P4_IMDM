@@ -9,9 +9,11 @@ public class FollowHand : MonoBehaviour
 {
     public static Gesture gen; // singleton
     public Rigidbody rb;
+    private Animator m_Animator;
+
     void Start()
     {
-        
+        m_Animator = gameObject.GetComponent<Animator>();
     }
 
     private float getAbs(float value)
