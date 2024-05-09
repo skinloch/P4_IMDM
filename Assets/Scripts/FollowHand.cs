@@ -33,7 +33,55 @@ public class FollowHand : MonoBehaviour
         }
         else if(getAbs(Gesture.gen.righthandpos[4].magnitude - Gesture.gen.righthandpos[8].magnitude) < .02f)
         {
-            Debug.Log("PINCH");
+            Debug.Log("Rpoint");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool rightRing(){
+        if(Gesture.gen.righthandpos[4].magnitude == 0 && Gesture.gen.righthandpos[12].magnitude == 0)
+        {
+            return false;
+        }
+        else if(getAbs(Gesture.gen.righthandpos[4].magnitude - Gesture.gen.righthandpos[12].magnitude) < .02f)
+        {
+            Debug.Log("Rring");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool leftPointer(){
+        if(Gesture.gen.lefthandpos[4].magnitude == 0 && Gesture.gen.lefthandpos[8].magnitude == 0)
+        {
+            return false;
+        }
+        else if(getAbs(Gesture.gen.lefthandpos[4].magnitude - Gesture.gen.lefthandpos[8].magnitude) < .02f)
+        {
+            Debug.Log("Lpoint");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool leftRing(){
+        if(Gesture.gen.lefthandpos[4].magnitude == 0 && Gesture.gen.lefthandpos[12].magnitude == 0)
+        {
+            return false;
+        }
+        else if(getAbs(Gesture.gen.lefthandpos[4].magnitude - Gesture.gen.lefthandpos[12].magnitude) < .02f)
+        {
+            Debug.Log("Lring");
             return true;
         }
         else
@@ -46,7 +94,16 @@ public class FollowHand : MonoBehaviour
     void Update()
     {
         if(rightPointer()){
+            rb.AddForce(0f, 0f, 100f, ForceMode.Impulse);
+        }
+        if(rightRing()){
             rb.AddForce(100f, 0f, 0f, ForceMode.Impulse);
+        }
+        if(leftPointer()){
+            rb.AddForce(0f, 0f, -100f, ForceMode.Impulse);
+        }
+        if(leftRing()){
+            rb.AddForce(-100f, 0f, 0f, ForceMode.Impulse);
         }
     }
 }
