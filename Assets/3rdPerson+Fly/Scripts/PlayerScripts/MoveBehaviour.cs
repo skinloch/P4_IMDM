@@ -52,6 +52,16 @@ public class MoveBehaviour : GenericBehaviour
 		JumpManagement();
 	}
 
+	private float getAbs(float value)
+    {
+        if(value < 0f){
+            return value * -1f;
+        }
+        else{
+            return value;
+        }
+    }
+
 	// Execute the idle and walk/run jump movements.
 	void JumpManagement()
 	{
