@@ -90,6 +90,22 @@ public class FollowHand : MonoBehaviour
         }
     }
 
+    public bool jump(){
+        if(Gesture.gen.lefthandpos[8].magnitude == 0 && Gesture.gen.righthandpos[8].magnitude == 0)
+        {
+            return false;
+        }
+        else if(getAbs(Gesture.gen.lefthandpos[8].magnitude - Gesture.gen.righthandpos[8].magnitude) < .02f)
+        {
+            Debug.Log("Jump");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -104,6 +120,9 @@ public class FollowHand : MonoBehaviour
         }
         if(leftRing()){
             rb.AddForce(-100f, 0f, 0f, ForceMode.Impulse);
+        }
+        if(jump()){
+            rb.AddForce(0f, 100f, 0f, ForceMode.Impulse);
         }
     }
 }
