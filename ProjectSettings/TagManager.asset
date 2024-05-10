@@ -17,6 +17,7 @@ TagManager:
   - inviswall
   - Boulder
   - Biplane
+  - Temple
   layers:
   - Default
   - TransparentFX

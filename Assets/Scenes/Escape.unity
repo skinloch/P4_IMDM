@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7614,12 +7614,12 @@ MonoBehaviour:
   graphRunner: {fileID: 1970212050}
   textureFramePool: {fileID: 1970212049}
   runningMode: 0
-  _worldAnnotationArea: {fileID: 0}
-  _poseDetectionAnnotationController: {fileID: 0}
-  _holisticAnnotationController: {fileID: 0}
-  _poseWorldLandmarksAnnotationController: {fileID: 0}
-  _segmentationMaskAnnotationController: {fileID: 0}
-  _poseRoiAnnotationController: {fileID: 0}
+  _worldAnnotationArea: {fileID: 1963334446}
+  _poseDetectionAnnotationController: {fileID: 1932465821}
+  _holisticAnnotationController: {fileID: 1932465822}
+  _poseWorldLandmarksAnnotationController: {fileID: 1963334447}
+  _segmentationMaskAnnotationController: {fileID: 1932465820}
+  _poseRoiAnnotationController: {fileID: 1932465823}
 --- !u!4 &1970212052
 Transform:
   m_ObjectHideFlags: 0
