@@ -110,19 +110,19 @@ public class FollowHand : MonoBehaviour
     void Update()
     {
         if(rightPointer()){
-            rb.AddForce(0f, 0f, 100f, ForceMode.Impulse);
+            rb.AddForce(0f, 0f, 250f, ForceMode.Impulse);
         }
         if(rightRing()){
-            rb.AddForce(100f, 0f, 0f, ForceMode.Impulse);
+            rb.AddForce(250f, 0f, 0f, ForceMode.Impulse);
         }
         if(leftPointer()){
-            rb.AddForce(0f, 0f, -100f, ForceMode.Impulse);
+            rb.AddForce(0f, 0f, -250f, ForceMode.Impulse);
         }
         if(leftRing()){
-            rb.AddForce(-100f, 0f, 0f, ForceMode.Impulse);
+            rb.AddForce(-250f, 0f, 0f, ForceMode.Impulse);
         }
         if(jump()){
-            rb.AddForce(0f, 100f, 0f, ForceMode.Impulse);
+            rb.AddForce(0f, 250f, 0f, ForceMode.Impulse);
         }
     }
 }
