@@ -18,6 +18,8 @@ TagManager:
   - Boulder
   - Biplane
   - Temple
+  - Wall
+  - Spider
   layers:
   - Default
   - TransparentFX
