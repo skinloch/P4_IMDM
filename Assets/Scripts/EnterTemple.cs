@@ -6,20 +6,14 @@ using UnityEngine.SceneManagement;
 public class EnterTemple : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float triggerXPosition; // The x position at which to trigger the scene transition
 
-    // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Temple")
+        // Check if the player has passed the specified x position
+        if (transform.position.x >= triggerXPosition)
         {
+            // Load the next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
