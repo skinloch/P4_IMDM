@@ -258,10 +258,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &45018749
 MonoBehaviour:
@@ -270,13 +270,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45018744}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385b04e9bbd2ef746be24b121dcad320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeInterval: 2
-  forceStrength: 10
+  animator: {fileID: 0}
+  moveSpeed: 5
+  frequency: 1
+  magnitude: 5
 --- !u!1001 &48300548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4876,7 +4878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd15de4f87bbf3f4bb3b56b7ae1e3565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerXPosition: -6
+  triggerXPosition: -5.1
 --- !u!1001 &1956885291
 PrefabInstance:
   m_ObjectHideFlags: 0
