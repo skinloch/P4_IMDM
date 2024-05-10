@@ -6,38 +6,25 @@ public class SpiderMove : MonoBehaviour
 {
     // Start is called before the first frame update
     public Animator animator;
-    public float moveSpeed = 5f;  // How fast the spider moves
+    public float moveSpeed = 5f;
+    public float frequency = 1f;  // Speed of oscillation
+    public float magnitude = 5f;  // Distance of oscillation
+    private Vector3 startPos;
     private Rigidbody rb;
-    private Vector3 moveDirection;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        moveDirection = transform.forward;  // Initial movement direction
+        startPos = transform.position;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        // Apply velocity in the direction the spider is currently facing
-        rb.velocity = moveDirection * moveSpeed;
+        float move = Mathf.Sin(Time.time * frequency) * magnitude;
+        transform.position = startPos + new Vector3(move, 0, 0);
+        rb.velocity = new Vector3(move * moveSpeed, rb.velocity.y, rb.velocity.z);
 
-        // Keep the spider facing in the direction of its velocity
-        transform.forward = moveDirection;
-
-        // Update the animator with the speed
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.magnitude));
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        // Check if the collision is with a wall
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            // Reverse the movement direction upon collision with a wall
-            moveDirection = -moveDirection;
-
-            // Ensure spider faces the new direction, align transform forward to the new move direction
-            transform.forward = moveDirection;
-        }
+        // Update animation parameters
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 }
