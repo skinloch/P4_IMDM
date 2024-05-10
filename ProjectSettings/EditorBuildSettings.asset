@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: 4a70cd99b26fde648887872f71ff3fae
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 07536bba2b73d554f98e4f9ec4e1f45d
   m_configObjects: {}
