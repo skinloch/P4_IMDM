@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinGame : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class WinGame : MonoBehaviour
     {
         if (collision.gameObject.tag == "Biplane")
         {
-            Debug.Log("HERE");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
